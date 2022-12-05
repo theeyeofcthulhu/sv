@@ -17,8 +17,7 @@ run: $(EXE)
 
 .PHONY: clean
 clean:
-	rm $(OBJ)
-	rm $(EXE)
+	@rm -v $(OBJ) $(EXE)
 
 $(OBJ): %.o: %.c $(INC)
 	$(CC) -c -o $@ $< $(CFLAGS)
