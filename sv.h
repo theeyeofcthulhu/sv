@@ -44,6 +44,11 @@
 #define SV_Puts(x) printf(SV_Fmt"\n", SV_Arg(x));
 
 /**
+ * Prints the variable identifer of \p x and its value.
+ */
+#define SV_Dbg(x) printf("%s: "SV_Fmt"\n", #x, SV_Arg(x));
+
+/**
  * Constructs a string view from the string literal \p lit.
  *
  * This takes advantage of the fact that \a sizeof knows
